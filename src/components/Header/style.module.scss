@@ -1,0 +1,18 @@
+header {
+    width: 100%;
+    height: 70px;
+    & .logo {
+        height: 100%;
+        width: 125px;
+        display: flex;
+        align-items: center;
+        font-family: FiraGO;
+        & h1 {
+            color: gray;
+            font-family: "FiraGO-Medium";
+        }
+        & h1::first-letter {
+            color: red
+        }
+    }
+}

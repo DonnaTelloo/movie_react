@@ -1,0 +1,73 @@
+.ArticlesContainer{
+    padding-top: 50px;
+    height: auto;
+    .ArticlesContainerHeading {
+        height: 50px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+        font-family: "FiraGO-SemiBold";
+        color: grey;
+        display: flex;
+        justify-content: space-between;
+    }
+    .Articles {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+        animation: fadeinout 1s ease-in-out;
+        .Article {
+            width: calc((1200px / 6) - 40px);
+            height: auto;
+            border-radius: 10px;
+            & img {
+                width: 100%;
+                height: 250px;
+                border-radius: 10px;
+                float: left;
+            }
+            & h1 {
+                height: 60px;
+                width: 100%;
+                float: left;
+                font-family: "FiraGO-Medium";
+                font-weight: 200;
+                font-size: 16px;
+                display: flex;
+                align-items: center;
+                color: grey;
+            }
+        }
+        @keyframes fadeinout {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    }
+    .ArticlesSkeleton {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+        .ArticleSkeleton {
+            width: calc((1200px / 6) - 40px);
+            height: 250px;
+            border-radius: 10px;
+            margin-bottom: 90px;
+            background: whitesmoke;
+            background-image: linear-gradient(100deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80%), linear-gradient(whitesmoke 10px, transparent 0), linear-gradient(whitesmoke 10px, transparent 0), linear-gradient(whitesmoke 10px, transparent 0), linear-gradient(whitesmoke 10px, transparent 0);
+            background-repeat: repeat-y;
+            background-size: 50px 100%, 150px 100%, 350px 100%, 300px 100%, 500px 100%;
+            background-position: 0 0, 5px 0;
+            animation: shine 1s infinite;
+            @keyframes shine {
+                to {
+                  background-position: 100% 0, 5px 0;
+                }
+              }
+        }
+    }
+}

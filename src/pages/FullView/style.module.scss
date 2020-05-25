@@ -1,0 +1,45 @@
+.MovieBackgroundImage {
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    position: relative;
+    &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #1a1a1a;
+        opacity: 0.7;
+        z-index: 22;
+    }
+}
+
+.MovieDetails {
+    box-sizing: border-box;
+    height: 375px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: -145px;
+    position: relative;
+    z-index: 23;
+    & .left {
+        width: 250px;
+        float: left;
+        height: 100%;
+        & img {
+            width: 250px;
+            height: 375px;
+            border-radius: 20px;
+        }
+    }
+    & .right {
+        width: calc(100% - 310px);
+        background-color: red;
+        float: right;
+        height: 150px;
+        position: absolute;
+        bottom: 0px;
+        right: 30px;    
+    }
+    
+}
