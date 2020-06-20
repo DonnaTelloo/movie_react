@@ -17,7 +17,6 @@ class FullView extends Component {
         })
     }
 
-
     componentDidMount(){
         let movieid = this.props.match.params.slug;
         axios.get(`${API_LINK}${API.Movie}/${movieid}${API_KEY}`)
@@ -30,8 +29,6 @@ class FullView extends Component {
         })
     }
 
-    // backdrop_path
-
     render() {
         return (
             <>
@@ -42,7 +39,7 @@ class FullView extends Component {
                         <img src={IMG_LINK + "t/p/original" + this.state.MovieDetails.poster_path} />
                     </div>
                     <div className={styles.right}>
-                        <MdMovie></MdMovie>
+                        {this.state.MovieDetails.genres.map(genre => <><MdMovie></MdMovie> <span>{ genre.name }</span></>)}
                         <p>{ this.state.MovieDetails.overview }</p>
                     </div>
                 </div>

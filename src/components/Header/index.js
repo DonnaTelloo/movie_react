@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 import { withNamespaces } from 'react-i18next';
 
 function Header(){
-    const { t, i18n } = useTranslation();
+    // const { t, i18n } = useTranslation();
     return (
         <>
             <header>
                 <div className={styles.logo}>
                     <Link to="/"><h1>MOVIE.GE</h1></Link>
                 </div>
-                <p>{ t('Welcome to React') }</p>
+                <p>dasda</p>
             </header>
         </>
     )
